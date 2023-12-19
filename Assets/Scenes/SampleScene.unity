@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSpeed: 1
-  maxSpeed: 10
+  maxSpeed: 5
 --- !u!4 &253255879
 Transform:
   m_ObjectHideFlags: 0
@@ -243,7 +243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 996e551110bdc3049960338969cf6011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 5581187936967495614, guid: c7a988593d4a39c488e9e5fb66ca32be, type: 3}
+  obstaclePrefabs:
+  - {fileID: 5581187936967495614, guid: c7a988593d4a39c488e9e5fb66ca32be, type: 3}
   spawnPoint: {fileID: 363876871}
   spawnRate: 2
   maxSpeed: 10

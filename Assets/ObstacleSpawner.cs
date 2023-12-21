@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-    public ObstacleController[] obstaclePrefabs;
+    public Obstacle[] obstaclePrefabs;
     public Transform spawnPoint;
     public float spawnRate = 2f;
     public float maxSpeed = 10f;
@@ -15,8 +15,8 @@ public class ObstacleSpawner : MonoBehaviour
     {
         if (Time.time >= nextSpawnTime)
         {
-            ObstacleController selectedObstacle = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
-            Instantiate(selectedObstacle, spawnPoint.position, Quaternion.identity, transform).Initialize(scoreTracker, playerTransform, speedController);
+            Obstacle selectedObstacle = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
+            Instantiate(selectedObstacle, spawnPoint.position + selectedObstacle.transform.position, Quaternion.identity, transform).Initialize(scoreTracker, playerTransform, speedController);
             nextSpawnTime = Time.time + 5f / (speedController.gameSpeed * Random.Range(0.8f, 1.2f));
         }   
     }

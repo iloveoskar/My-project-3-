@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleController : MonoBehaviour
+public class Obstacle : MonoBehaviour
 {
     public float baseSpeed = 5f;
     public ScoreTracker scoreTracker;
